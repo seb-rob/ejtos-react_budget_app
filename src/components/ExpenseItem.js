@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { TiDelete } from 'react-icons/ti';
+import { BsFillPatchPlusFill, BsFillPatchMinusFill } from "react-icons/bs";
 import { AppContext } from '../context/AppContext';
 
 const ExpenseItem = (props) => {
@@ -41,12 +42,12 @@ const ExpenseItem = (props) => {
         <td>{props.name}</td>
         <td>{currency}{props.cost}</td>
         <td><button className="btn btn-success" onClick={event=> increaseAllocation(props.name)}>
-            + 10
+            <BsFillPatchPlusFill size="35px" />
         </button></td>
         <td><button className="btn btn-success" onClick={event=> decreaseAllocation(props.name)}>
-            - 10
+            <BsFillPatchMinusFill size="35px" />
         </button></td>
-        <td><TiDelete size='1.5em' onClick={handleDeleteExpense}></TiDelete></td>
+        <td><TiDelete size='60px' className="btn btn-success" onClick={handleDeleteExpense}></TiDelete></td>
         </tr>
     );
 };

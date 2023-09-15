@@ -17,18 +17,17 @@ const Currency = () => {
     }
     return(
         <form>
-            <select className="form-select bg-success" value={currency} onChange={currencyHandler}>
-                <option>Currency</option>
+            <select className="form-select alert alert-success" value={currency} onChange={currencyHandler}>
                 <option 
                     value="$"
                 >$ Doller</option>
-                <option 
-                    value="€"
-                >€ Euro</option>
                 <option
                     selected
                     value="£"
                 >£ Pound</option>
+                <option 
+                    value="€"
+                >€ Euro</option>
                 <option 
                     value="&#8377;"
                 >&#8377; Rupee</option>
